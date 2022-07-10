@@ -7,7 +7,7 @@ async def asyncmain():
     browser = await launch()
     page = await browser.newPage()
     await page.goto('https://iss-live.github.io')
-    sleep(20)
+    sleep(30)
     await page.screenshot({'path': str("'" + iss_location.lat() + '_' + iss_location.long() + '.png' + "'"), 'fullPage': 'true'})
     await browser.close()
 
